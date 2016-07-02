@@ -1,7 +1,7 @@
 package main
 
 import "fmt"
-import "foo"
+import "hgapg/foo"
 
 func main() {
     fmt.Printf("hello, world\n")
