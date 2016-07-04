@@ -24,3 +24,5 @@ fetch-sans-glide:
 glide:
 	# glide init
 	glide --verbose get -s github.com/gyuho/goraph
+clean:
+	rm -rf bin/ pkg/
