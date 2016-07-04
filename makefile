@@ -16,9 +16,11 @@ check:
 	#go test -v './src/hgapg/...'
 fetch-sans-glide:
 	go get -d -u github.com/gyuho/goraph
-	rm -rf src/hgapg/vendor/
-	mkdir src/hgapg/vendor/
-	mv src/github.com src/hgapg/vendor/
+	rm -rf src/vendor/
+	mkdir src/vendor/
+	mv src/github.com src/vendor/
+	rm -rf src/vendor/github.com/gyuho/goraph/testdata/*.png
+	find src/vendor/ -name '.git' |xargs rm -rf
 glide:
 	# glide init
 	glide --verbose get -s github.com/gyuho/goraph
